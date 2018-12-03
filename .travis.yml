@@ -1,0 +1,9 @@
+language: csharp
+solution: ADN.Threading.sln
+mono: none
+dotnet: 2.0.0
+script:
+  - dotnet restore
+  - dotnet build ./src/ADN.Threading/
+  - dotnet build ./tests/ADN.Threading.Tests/
+  - dotnet test ./tests/ADN.Threading.Tests/

@@ -1,0 +1,21 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp2.0</TargetFramework>
+    <Version>2.0.0</Version>
+    <Title>ADN.Threading</Title>
+    <Authors>Andrés Di Giovanni</Authors>
+    <Company>ADN</Company>	
+    <Product>ADN.Threading</Product>
+    <Description>ADN.Threading is a cross-platform open-source library which provides threading utilities to .NET developers</Description>
+    <Copyright>Copyright © Andrés Di Giovanni 2018</Copyright>
+    <PackageRequireLicenseAcceptance>false</PackageRequireLicenseAcceptance>
+    <PackageLicenseUrl>https://github.com/andresdigiovanni/ADN.Threading/blob/master/LICENSE</PackageLicenseUrl>
+    <PackageProjectUrl>https://github.com/andresdigiovanni/ADN.Threading</PackageProjectUrl>
+    <PackageTags></PackageTags>
+    <PublishRepositoryUrl>true</PublishRepositoryUrl> 
+    <RepositoryUrl>https://github.com/andresdigiovanni/ADN.Threading</RepositoryUrl> 
+    <PackageIconUrl>https://raw.githubusercontent.com/andresdigiovanni/ADN.Threading/master/icon.png</PackageIconUrl>
+  </PropertyGroup>
+
+</Project>
