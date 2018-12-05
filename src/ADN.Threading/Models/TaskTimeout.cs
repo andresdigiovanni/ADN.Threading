@@ -8,8 +8,6 @@ namespace ADN.Threading
     /// <summary>
     /// A static class to execute asynchronous operations.
     /// </summary>
-    /// Waits for all of the provided cancellable System.Threading.Tasks.Task objects
-        //     to complete execution within a specified time interval.
     public static class TaskTimeout
     {
         /// <summary>

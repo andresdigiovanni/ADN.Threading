@@ -21,7 +21,6 @@ namespace ADN.Threading.Tests
         [Fact]
         public void CompletesIn_Expception_Timeout()
         {
-
             Assert.Throws<TimeoutException>(() =>
                 DelayFunction(TIMEOUT_MILLISECONDS, EXCESS_DELAY_MILLISECONDS)
             );
