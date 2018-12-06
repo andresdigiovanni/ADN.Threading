@@ -2,7 +2,7 @@
 
   <PropertyGroup>
     <TargetFramework>netcoreapp2.0</TargetFramework>
-    <Version>2.0.0</Version>
+    <Version>1.0.0</Version>
     <Title>ADN.Threading</Title>
     <Authors>Andrés Di Giovanni</Authors>
     <Company>ADN</Company>	
@@ -12,7 +12,7 @@
     <PackageRequireLicenseAcceptance>false</PackageRequireLicenseAcceptance>
     <PackageLicenseUrl>https://github.com/andresdigiovanni/ADN.Threading/blob/master/LICENSE</PackageLicenseUrl>
     <PackageProjectUrl>https://github.com/andresdigiovanni/ADN.Threading</PackageProjectUrl>
-    <PackageTags>Task; Threading; Timeout</PackageTags>
+    <PackageTags>Lock; Task; Threading; Timeout</PackageTags>
     <PublishRepositoryUrl>true</PublishRepositoryUrl> 
     <RepositoryUrl>https://github.com/andresdigiovanni/ADN.Threading</RepositoryUrl> 
     <PackageIconUrl>https://raw.githubusercontent.com/andresdigiovanni/ADN.Threading/master/icon.png</PackageIconUrl>
