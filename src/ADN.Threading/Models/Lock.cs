@@ -17,6 +17,18 @@ namespace ADN.Threading
         /// <param name="obj">The object on which to acquire the lock.</param>
         /// <param name="millisecondsTimeout">The number of milliseconds to wait for the lock.</param>
         /// <param name="action">Action to execute.</param>
+        /// <exception cref="TimeoutException">Timeout exceeded, unable to lock.</exception>
+        /// <exception cref="Exception">An exception occured during the lock proces.</exception>
+        /// <example>
+        /// <code lang="csharp">
+        /// var lockObj = new object();
+        /// var timeout = 1000;
+        /// Lock.CompletesIn(lockObj, timeout, () =>
+        /// { 
+        ///     // your function
+        /// });
+        /// </code>
+        /// </example>
         public static void CompletesIn(object obj, int millisecondsTimeout, Action action)
         {
             Exception exception = null;

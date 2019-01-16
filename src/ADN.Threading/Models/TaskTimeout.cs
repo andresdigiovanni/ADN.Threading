@@ -13,12 +13,22 @@ namespace ADN.Threading
         /// <summary>
         /// Waits for the provided operation to complete execution within a specified time interval.
         /// </summary>
-        /// <param name="timeout">The number of milliseconds to wait.</param>
+        /// <param name="millisecondsTimeout">The number of milliseconds to wait.</param>
         /// <param name="action">Operation on which to wait.</param>
-        public static void CompletesIn(int timeout, Action action)
+        /// <exception cref="TimeoutException">Task not completed within the specified time interval.</exception>
+        /// <example>
+        /// <code lang="csharp">
+        /// var timeout = 1000;
+        /// TaskTimeout.CompletesIn(timeout, () =>
+        /// {
+        ///     // your function
+        /// });
+        /// </code>
+        /// </example>
+        public static void CompletesIn(int millisecondsTimeout, Action action)
         {
             var task = Task.Run(action);
-            var completedInTime = Task.WaitAll(new[] { task }, TimeSpan.FromMilliseconds(timeout));
+            var completedInTime = Task.WaitAll(new[] { task }, TimeSpan.FromMilliseconds(millisecondsTimeout));
 
             if (task.Exception != null)
             {
@@ -32,7 +42,7 @@ namespace ADN.Threading
 
             if (!completedInTime)
             {
-                throw new TimeoutException($"Task did not complete in {timeout} milliseconds.");
+                throw new TimeoutException($"Task did not complete in {millisecondsTimeout} milliseconds.");
             }
         }
     }
