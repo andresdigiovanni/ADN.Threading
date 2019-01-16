@@ -1,0 +1,56 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>ADN.Threading</name>
+    </assembly>
+    <members>
+        <member name="T:ADN.Threading.Lock">
+            <summary>
+            A static class that provides a mechanism that synchronizes access to objects.
+            </summary>
+        </member>
+        <member name="M:ADN.Threading.Lock.CompletesIn(System.Object,System.Int32,System.Action)">
+            <summary>
+            Attempts, for the specified number of milliseconds, to acquire an exclusive lock
+            on the specified object, and execute the action.
+            </summary>
+            <param name="obj">The object on which to acquire the lock.</param>
+            <param name="millisecondsTimeout">The number of milliseconds to wait for the lock.</param>
+            <param name="action">Action to execute.</param>
+            <exception cref="T:System.TimeoutException">Timeout exceeded, unable to lock.</exception>
+            <exception cref="T:System.Exception">An exception occured during the lock proces.</exception>
+            <example>
+            <code lang="csharp">
+            var lockObj = new object();
+            var timeout = 1000;
+            Lock.CompletesIn(lockObj, timeout, () =>
+            { 
+                // your function
+            });
+            </code>
+            </example>
+        </member>
+        <member name="T:ADN.Threading.TaskTimeout">
+            <summary>
+            A static class to execute asynchronous operations.
+            </summary>
+        </member>
+        <member name="M:ADN.Threading.TaskTimeout.CompletesIn(System.Int32,System.Action)">
+            <summary>
+            Waits for the provided operation to complete execution within a specified time interval.
+            </summary>
+            <param name="millisecondsTimeout">The number of milliseconds to wait.</param>
+            <param name="action">Operation on which to wait.</param>
+            <exception cref="T:System.TimeoutException">Task not completed within the specified time interval.</exception>
+            <example>
+            <code lang="csharp">
+            var timeout = 1000;
+            TaskTimeout.CompletesIn(timeout, () =>
+            {
+                // your function
+            });
+            </code>
+            </example>
+        </member>
+    </members>
+</doc>

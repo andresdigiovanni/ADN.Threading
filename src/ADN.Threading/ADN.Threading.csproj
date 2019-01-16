@@ -8,7 +8,7 @@
     <Company>ADN</Company>	
     <Product>ADN.Threading</Product>
     <Description>ADN.Threading is a cross-platform open-source library which provides threading utilities to .NET developers</Description>
-    <Copyright>Copyright © Andrés Di Giovanni 2018</Copyright>
+    <Copyright>Copyright © Andrés Di Giovanni 2019</Copyright>
     <PackageRequireLicenseAcceptance>false</PackageRequireLicenseAcceptance>
     <PackageLicenseUrl>https://github.com/andresdigiovanni/ADN.Threading/blob/master/LICENSE</PackageLicenseUrl>
     <PackageProjectUrl>https://github.com/andresdigiovanni/ADN.Threading</PackageProjectUrl>
@@ -17,5 +17,20 @@
     <RepositoryUrl>https://github.com/andresdigiovanni/ADN.Threading</RepositoryUrl> 
     <PackageIconUrl>https://raw.githubusercontent.com/andresdigiovanni/ADN.Threading/master/icon.png</PackageIconUrl>
   </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|AnyCPU'">
+    <DocumentationFile></DocumentationFile>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+    <DocumentationFile>ADN.Threading.xml</DocumentationFile>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Vsxmd" Version="1.3.3">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers</IncludeAssets>
+    </PackageReference>
+  </ItemGroup>
 
 </Project>
