@@ -58,7 +58,7 @@ namespace ADN.Threading
 
                 if (exception != null)
                 {
-                    throw new Exception("An exception occured during the lock proces.", exception);
+                    throw exception;
                 }
             }
         }

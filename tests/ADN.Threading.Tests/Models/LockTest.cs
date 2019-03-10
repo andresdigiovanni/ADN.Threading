@@ -27,7 +27,7 @@ namespace ADN.Threading.Tests
             thread.Start();
 
             Thread.Sleep(WAIT_UNTIL_THREAD_START_MILLISECONDS);
-            Assert.Throws<Exception>(() =>
+            Assert.Throws<TimeoutException>(() =>
                 DelayFunctionWithLock(lockObj, DELAY_FUNCTION_MILLISECONDS, LOCK_TIMEOUT_MILLISECONDS)
             );
         }
