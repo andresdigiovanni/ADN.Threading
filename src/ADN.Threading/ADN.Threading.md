@@ -7,6 +7,15 @@
   - [CompletesIn(obj,millisecondsTimeout,action)](#M-ADN-Threading-Lock-CompletesIn-System-Object,System-Int32,System-Action- 'ADN.Threading.Lock.CompletesIn(System.Object,System.Int32,System.Action)')
 - [TaskTimeout](#T-ADN-Threading-TaskTimeout 'ADN.Threading.TaskTimeout')
   - [CompletesIn(millisecondsTimeout,action)](#M-ADN-Threading-TaskTimeout-CompletesIn-System-Int32,System-Action- 'ADN.Threading.TaskTimeout.CompletesIn(System.Int32,System.Action)')
+- [TimerWithLock](#T-ADN-Threading-TimerWithLock 'ADN.Threading.TimerWithLock')
+  - [#ctor(callback,state,dueTime,period)](#M-ADN-Threading-TimerWithLock-#ctor-System-Threading-TimerCallback,System-Object,System-Int32,System-Int32- 'ADN.Threading.TimerWithLock.#ctor(System.Threading.TimerCallback,System.Object,System.Int32,System.Int32)')
+  - [Dispose()](#M-ADN-Threading-TimerWithLock-Dispose 'ADN.Threading.TimerWithLock.Dispose')
+- [TimerWithRestart](#T-ADN-Threading-TimerWithRestart 'ADN.Threading.TimerWithRestart')
+  - [#ctor(callback,state,dueTime,period)](#M-ADN-Threading-TimerWithRestart-#ctor-System-Threading-TimerCallback,System-Object,System-Int32,System-Int32- 'ADN.Threading.TimerWithRestart.#ctor(System.Threading.TimerCallback,System.Object,System.Int32,System.Int32)')
+  - [Dispose()](#M-ADN-Threading-TimerWithRestart-Dispose 'ADN.Threading.TimerWithRestart.Dispose')
+- [TimerWithTryEnter](#T-ADN-Threading-TimerWithTryEnter 'ADN.Threading.TimerWithTryEnter')
+  - [#ctor(callback,state,dueTime,period)](#M-ADN-Threading-TimerWithTryEnter-#ctor-System-Threading-TimerCallback,System-Object,System-Int32,System-Int32- 'ADN.Threading.TimerWithTryEnter.#ctor(System.Threading.TimerCallback,System.Object,System.Int32,System.Int32)')
+  - [Dispose()](#M-ADN-Threading-TimerWithTryEnter-Dispose 'ADN.Threading.TimerWithTryEnter.Dispose')
 
 <a name='T-ADN-Threading-Lock'></a>
 ## Lock `type`
@@ -93,3 +102,126 @@ TaskTimeout.CompletesIn(timeout, () =&gt;
     // your function
 }); 
 ```
+
+<a name='T-ADN-Threading-TimerWithLock'></a>
+## TimerWithLock `type`
+
+##### Namespace
+
+ADN.Threading
+
+##### Summary
+
+Safe overlap timer with lock.
+
+<a name='M-ADN-Threading-TimerWithLock-#ctor-System-Threading-TimerCallback,System-Object,System-Int32,System-Int32-'></a>
+### #ctor(callback,state,dueTime,period) `constructor`
+
+##### Summary
+
+Initializes a new instance of the TimerWithLock class.
+
+##### Parameters
+
+| Name | Type | Description |
+| ---- | ---- | ----------- |
+| callback | [System.Threading.TimerCallback](http://msdn.microsoft.com/query/dev14.query?appId=Dev14IDEF1&l=EN-US&k=k:System.Threading.TimerCallback 'System.Threading.TimerCallback') | A System.Threading.TimerCallback delegate representing a method to be executed. |
+| state | [System.Object](http://msdn.microsoft.com/query/dev14.query?appId=Dev14IDEF1&l=EN-US&k=k:System.Object 'System.Object') | An object containing information to be used by the callback method, or null. |
+| dueTime | [System.Int32](http://msdn.microsoft.com/query/dev14.query?appId=Dev14IDEF1&l=EN-US&k=k:System.Int32 'System.Int32') | The amount of time to delay before callback is invoked, in milliseconds.
+Specify System.Threading.Timeout.Infinite to prevent the timer from starting.
+Specify zero (0) to start the timer immediately. |
+| period | [System.Int32](http://msdn.microsoft.com/query/dev14.query?appId=Dev14IDEF1&l=EN-US&k=k:System.Int32 'System.Int32') | The time interval between invocations of callback, in milliseconds.
+Specify System.Threading.Timeout.Infinite to disable periodic signaling. |
+
+<a name='M-ADN-Threading-TimerWithLock-Dispose'></a>
+### Dispose() `method`
+
+##### Summary
+
+Releases all resources used by the current instance of ADN.Threading.TimerWithLock.
+
+##### Parameters
+
+This method has no parameters.
+
+<a name='T-ADN-Threading-TimerWithRestart'></a>
+## TimerWithRestart `type`
+
+##### Namespace
+
+ADN.Threading
+
+##### Summary
+
+Safe overlap timer with stop and restart.
+
+<a name='M-ADN-Threading-TimerWithRestart-#ctor-System-Threading-TimerCallback,System-Object,System-Int32,System-Int32-'></a>
+### #ctor(callback,state,dueTime,period) `constructor`
+
+##### Summary
+
+Initializes a new instance of the TimerWithRestart class.
+
+##### Parameters
+
+| Name | Type | Description |
+| ---- | ---- | ----------- |
+| callback | [System.Threading.TimerCallback](http://msdn.microsoft.com/query/dev14.query?appId=Dev14IDEF1&l=EN-US&k=k:System.Threading.TimerCallback 'System.Threading.TimerCallback') | A System.Threading.TimerCallback delegate representing a method to be executed. |
+| state | [System.Object](http://msdn.microsoft.com/query/dev14.query?appId=Dev14IDEF1&l=EN-US&k=k:System.Object 'System.Object') | An object containing information to be used by the callback method, or null. |
+| dueTime | [System.Int32](http://msdn.microsoft.com/query/dev14.query?appId=Dev14IDEF1&l=EN-US&k=k:System.Int32 'System.Int32') | The amount of time to delay before callback is invoked, in milliseconds.
+Specify System.Threading.Timeout.Infinite to prevent the timer from starting.
+Specify zero (0) to start the timer immediately. |
+| period | [System.Int32](http://msdn.microsoft.com/query/dev14.query?appId=Dev14IDEF1&l=EN-US&k=k:System.Int32 'System.Int32') | The time interval between invocations of callback, in milliseconds.
+Specify System.Threading.Timeout.Infinite to disable periodic signaling. |
+
+<a name='M-ADN-Threading-TimerWithRestart-Dispose'></a>
+### Dispose() `method`
+
+##### Summary
+
+Releases all resources used by the current instance of ADN.Threading.TimerWithRestart.
+
+##### Parameters
+
+This method has no parameters.
+
+<a name='T-ADN-Threading-TimerWithTryEnter'></a>
+## TimerWithTryEnter `type`
+
+##### Namespace
+
+ADN.Threading
+
+##### Summary
+
+Safe overlap timer with try enter.
+
+<a name='M-ADN-Threading-TimerWithTryEnter-#ctor-System-Threading-TimerCallback,System-Object,System-Int32,System-Int32-'></a>
+### #ctor(callback,state,dueTime,period) `constructor`
+
+##### Summary
+
+Initializes a new instance of the TimerWithTryEnter class.
+
+##### Parameters
+
+| Name | Type | Description |
+| ---- | ---- | ----------- |
+| callback | [System.Threading.TimerCallback](http://msdn.microsoft.com/query/dev14.query?appId=Dev14IDEF1&l=EN-US&k=k:System.Threading.TimerCallback 'System.Threading.TimerCallback') | A System.Threading.TimerCallback delegate representing a method to be executed. |
+| state | [System.Object](http://msdn.microsoft.com/query/dev14.query?appId=Dev14IDEF1&l=EN-US&k=k:System.Object 'System.Object') | An object containing information to be used by the callback method, or null. |
+| dueTime | [System.Int32](http://msdn.microsoft.com/query/dev14.query?appId=Dev14IDEF1&l=EN-US&k=k:System.Int32 'System.Int32') | The amount of time to delay before callback is invoked, in milliseconds.
+Specify System.Threading.Timeout.Infinite to prevent the timer from starting.
+Specify zero (0) to start the timer immediately. |
+| period | [System.Int32](http://msdn.microsoft.com/query/dev14.query?appId=Dev14IDEF1&l=EN-US&k=k:System.Int32 'System.Int32') | The time interval between invocations of callback, in milliseconds.
+Specify System.Threading.Timeout.Infinite to disable periodic signaling. |
+
+<a name='M-ADN-Threading-TimerWithTryEnter-Dispose'></a>
+### Dispose() `method`
+
+##### Summary
+
+Releases all resources used by the current instance of ADN.Threading.TimerWithTryEnter.
+
+##### Parameters
+
+This method has no parameters.

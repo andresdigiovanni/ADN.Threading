@@ -52,5 +52,71 @@
             </code>
             </example>
         </member>
+        <member name="T:ADN.Threading.TimerWithLock">
+            <summary>
+            Safe overlap timer with lock.
+            </summary>
+        </member>
+        <member name="M:ADN.Threading.TimerWithLock.#ctor(System.Threading.TimerCallback,System.Object,System.Int32,System.Int32)">
+            <summary>
+            Initializes a new instance of the TimerWithLock class.
+            </summary>
+            <param name="callback">A System.Threading.TimerCallback delegate representing a method to be executed.</param>
+            <param name="state">An object containing information to be used by the callback method, or null.</param>
+            <param name="dueTime">The amount of time to delay before callback is invoked, in milliseconds.
+            Specify System.Threading.Timeout.Infinite to prevent the timer from starting.
+            Specify zero (0) to start the timer immediately.</param>
+            <param name="period">The time interval between invocations of callback, in milliseconds.
+            Specify System.Threading.Timeout.Infinite to disable periodic signaling.</param>
+        </member>
+        <member name="M:ADN.Threading.TimerWithLock.Dispose">
+            <summary>
+            Releases all resources used by the current instance of ADN.Threading.TimerWithLock.
+            </summary>
+        </member>
+        <member name="T:ADN.Threading.TimerWithRestart">
+            <summary>
+            Safe overlap timer with stop and restart.
+            </summary>
+        </member>
+        <member name="M:ADN.Threading.TimerWithRestart.#ctor(System.Threading.TimerCallback,System.Object,System.Int32,System.Int32)">
+            <summary>
+            Initializes a new instance of the TimerWithRestart class.
+            </summary>
+            <param name="callback">A System.Threading.TimerCallback delegate representing a method to be executed.</param>
+            <param name="state">An object containing information to be used by the callback method, or null.</param>
+            <param name="dueTime">The amount of time to delay before callback is invoked, in milliseconds.
+            Specify System.Threading.Timeout.Infinite to prevent the timer from starting.
+            Specify zero (0) to start the timer immediately.</param>
+            <param name="period">The time interval between invocations of callback, in milliseconds.
+            Specify System.Threading.Timeout.Infinite to disable periodic signaling.</param>
+        </member>
+        <member name="M:ADN.Threading.TimerWithRestart.Dispose">
+            <summary>
+            Releases all resources used by the current instance of ADN.Threading.TimerWithRestart.
+            </summary>
+        </member>
+        <member name="T:ADN.Threading.TimerWithTryEnter">
+            <summary>
+            Safe overlap timer with try enter.
+            </summary>
+        </member>
+        <member name="M:ADN.Threading.TimerWithTryEnter.#ctor(System.Threading.TimerCallback,System.Object,System.Int32,System.Int32)">
+            <summary>
+            Initializes a new instance of the TimerWithTryEnter class.
+            </summary>
+            <param name="callback">A System.Threading.TimerCallback delegate representing a method to be executed.</param>
+            <param name="state">An object containing information to be used by the callback method, or null.</param>
+            <param name="dueTime">The amount of time to delay before callback is invoked, in milliseconds.
+            Specify System.Threading.Timeout.Infinite to prevent the timer from starting.
+            Specify zero (0) to start the timer immediately.</param>
+            <param name="period">The time interval between invocations of callback, in milliseconds.
+            Specify System.Threading.Timeout.Infinite to disable periodic signaling.</param>
+        </member>
+        <member name="M:ADN.Threading.TimerWithTryEnter.Dispose">
+            <summary>
+            Releases all resources used by the current instance of ADN.Threading.TimerWithTryEnter.
+            </summary>
+        </member>
     </members>
 </doc>

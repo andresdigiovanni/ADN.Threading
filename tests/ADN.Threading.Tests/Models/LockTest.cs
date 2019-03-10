@@ -4,7 +4,6 @@ using System.Text;
 using System.Threading;
 using Xunit;
 
-
 namespace ADN.Threading.Tests
 {
     public class LockTest
