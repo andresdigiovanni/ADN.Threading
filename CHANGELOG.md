@@ -6,6 +6,10 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 ## [Unreleased]
 
+## [1.2.0] - 2019-04-23
+### Added
+- Support to Net Framework 4.5.2
+
 ## [1.1.0] - 2019-03-10
 ### Added
 - Classes: TimerWithLock, TimerWithRestart and TimerWithTryEnter.
