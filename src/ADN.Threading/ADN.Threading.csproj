@@ -2,6 +2,7 @@
 
   <PropertyGroup>
     <TargetFrameworks>netcoreapp2.0;net452</TargetFrameworks>
+    <ProjectGuid>{3F6CBBFF-7C45-4220-ADEB-6AFA3BEE8D79}</ProjectGuid>
     <Version>1.2.0</Version>
     <Title>ADN.Threading</Title>
     <Authors>Andrés Di Giovanni</Authors>

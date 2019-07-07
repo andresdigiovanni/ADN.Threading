@@ -5,6 +5,8 @@ ADN.Threading is a cross-platform open-source library which provides graphs util
 [![Build Status](https://travis-ci.org/andresdigiovanni/ADN.Threading.svg?branch=master)](https://travis-ci.org/andresdigiovanni/ADN.Threading)
 [![NuGet](https://img.shields.io/nuget/v/ADN.Threading.svg)](https://www.nuget.org/packages/ADN.Threading/)
 [![BCH compliance](https://bettercodehub.com/edge/badge/andresdigiovanni/ADN.Threading?branch=master)](https://bettercodehub.com/)
+[![Maintainability Rating](https://sonarcloud.io/api/project_badges/measure?project=andresdigiovanni_ADN.Threading&metric=sqale_rating)](https://sonarcloud.io/dashboard?id=andresdigiovanni_ADN.Threading)
+[![Quality](https://sonarcloud.io/api/project_badges/measure?project=andresdigiovanni_ADN.Threading&metric=alert_status)](https://sonarcloud.io/dashboard?id=andresdigiovanni_ADN.Threading)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
 ## Installation
