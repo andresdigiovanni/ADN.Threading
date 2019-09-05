@@ -9,6 +9,20 @@ ADN.Threading is a cross-platform open-source library which provides graphs util
 [![Quality](https://sonarcloud.io/api/project_badges/measure?project=andresdigiovanni_ADN.Threading&metric=alert_status)](https://sonarcloud.io/dashboard?id=andresdigiovanni_ADN.Threading)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
+## Basic usage
+
+Example safe overlap timer with try enter:
+
+```csharp
+public void Foo(object state) { }
+
+object state = new object();
+int dueTime = 0;
+int period = 10;
+
+var timer = new TimerWithTryEnter(Foo, state, dueTime, period);
+```
+
 ## Installation
 
 ADN.Threading runs on Windows, Linux, and macOS.
